@@ -1,0 +1,22 @@
+.nav a {
+	color: #008080;
+	font-size: 15px;
+	font-weight: bolder;
+	padding: 16px 15px;
+	text-transform: uppercase;
+	background-color: #FFFFFF;
+}
+
+.nav li {
+	display: inline;
+	background-color: #FFF;
+}
+
+.jumbotron {
+	background-image: url(http://digital-art-gallery.com/oid/63/1200x733_11556_My_sky_2d_illustration_sci_fi_android_picture_image_digital_art.jpg);
+	height: 725px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
