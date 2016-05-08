@@ -5,12 +5,13 @@
 <title>Menu interactivo</title>
 <link href="css/layout.css" rel="stylesheet" type="text/css" />
 <link href="css/menu.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 
 <header>
             
-<a href="https://www.davinci.edu.ar/" class="stuts"><img src="https://static.acaula.com.ar/center/AR/272-escuela-da-vinci-ebdac8ae-e798-4807-a1f5-a27855265e23-logo-200x200.png"></a>
+<a href="https://www.davinci.edu.ar/" class="stuts"><img src="images/Logo_da_vinci.png"></a>
 </header>
        
 <div class="container">
@@ -21,6 +22,7 @@
 <ul class="subs">
 <li><a href="#">Deuda</a></li>
 <li><a href="#">Derecho de Examen</a></li>
+
 
 </ul>
 </li>
@@ -49,6 +51,58 @@
 </ul>
 
 </div>
-		
+
+
+<video autoplay  poster="images/fondo.png"  class="stuts"  id="bgvid" loop>
+<source src="video/dv.mp4" type="video/mp4">
+
+</video>
+
+<div id="polina">
+<h1>Polina</h1>
+<p>filmed by Alexander Wagner 2011
+<p><a href="//demosthenes.info/blog/777/Create-Fullscreen-HTML5-Page-Background-Video">original article</a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+<p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+<button>Pause</button>
+</div>
+
+
+
+<script>
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+
+
+
+
+</script>
+
+
+
     </body>
 </html>
